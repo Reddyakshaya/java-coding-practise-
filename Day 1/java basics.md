@@ -1,43 +1,130 @@
-Install jdk
-  . jdk contains tools to write ,run and compile a java program 
-  . to know the version should open terminal and check 
-       java-version then javac-version
+# Java Basics
 
-JVM,JRE,JDK:
-  JDK - (java development kit) it is a kit which contains tools to run,write and compile a java program
-  JRE -(java run time environment) it contains libraries which are used to run java
-  JVM -(java virtual machine) it actually runs java bitecode
-           JDK
-            |
-           JRE
-            |
-           JVM
-How it runs:
-  at first we compile it using main.java then javac for compilation and then it coverts to .class this .class we cant see but it coverts the code to bytecode in which the JVM can access it into machine code and produce the output.
-          main.javac
-              |
-          main.class
-              |
-             JVM
-              | 
-            output
-Main()
- public - JVM can acces using this
- static - can run without creating objects
- void - returns nothing
- main - program starts from this
+## 1. Install JDK
 
-Naming conventions 
-    . class names
-        maxValue
-        studentName
-    . variable names
-         StudentName
-         RollNumber
-    . constant
-         MAX_VALUE
-         MIN_VALUE
-    . method name
-         StudentName()
-         RollNumber()
- 
+* **JDK (Java Development Kit)** contains the tools required to **write, compile, and run** Java programs.
+* To check the Java version, open the terminal and use:
+
+```bash
+java -version
+javac -version
+```
+
+## 2. JVM, JRE, and JDK
+
+### JDK — Java Development Kit
+
+* Contains tools required to **develop, compile, and run** Java programs.
+* Includes the **JRE** and development tools.
+
+### JRE — Java Runtime Environment
+
+* Provides the libraries and environment required to **run Java programs**.
+* Contains the **JVM** and Java libraries.
+
+### JVM — Java Virtual Machine
+
+* Runs the **Java bytecode** stored in `.class` files.
+* Converts bytecode into instructions that the computer can execute.
+
+### Relationship
+
+```text
+JDK
+ |
+ └── JRE
+      |
+      └── JVM
+```
+
+## 3. How a Java Program Runs
+
+* Java source code is written in a `.java` file.
+* The `javac` compiler converts the `.java` file into a `.class` file.
+* The `.class` file contains **bytecode**.
+* The **JVM** runs the bytecode and produces the output.
+
+### Process
+
+```text
+Main.java
+    |
+    | javac
+    ↓
+Main.class
+    |
+    | JVM
+    ↓
+Output
+```
+
+### Commands
+
+* Compile the Java program:
+
+```bash
+javac Main.java
+```
+
+* Run the compiled program:
+
+```bash
+java Main
+```
+
+## 4. `main()` Method
+
+* `main()` is the **starting point** of a Java application.
+
+```java
+public static void main(String[] args) {
+    // program code
+}
+```
+
+* **public** → Allows the JVM to access the method.
+* **static** → Allows the method to run without creating an object.
+* **void** → The method does not return a value.
+* **main** → The JVM looks for this method to start the program.
+* **String[] args** → Stores command-line arguments.
+
+## 5. Java Naming Conventions
+
+### Class Names
+
+* Use **PascalCase**.
+* The first letter of each word is uppercase.
+
+```java
+MaxValue
+StudentName
+```
+
+### Variable Names
+
+* Use **camelCase**.
+* The first word starts with lowercase and the next words start with uppercase.
+
+```java
+studentName
+rollNumber
+```
+
+### Constants
+
+* Use **UPPER_CASE** with underscores between words.
+
+```java
+MAX_VALUE
+MIN_VALUE
+```
+
+### Method Names
+
+* Use **camelCase**.
+* Method names normally start with a lowercase letter.
+
+```java
+studentName()
+rollNumber()
+```

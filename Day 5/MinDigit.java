@@ -6,8 +6,7 @@ public class MinDigit {
             int digit=n%10;
             if(digit<min){
                 min=digit;
-                
-            }
+             }
            n=n/10;
         } System.out.print(min);
 
